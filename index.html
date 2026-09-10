@@ -419,45 +419,68 @@
         // 初期表示用の商品データ（Google Sheetsが一時的に応答しなくてもサイトは表示）
         const EMBEDDED_PRODUCTS = [{"id":"p1","name":"緊急企画！EVIDENSレデマキャン","itemCategory":"クレンジング洗顔","concern":"乾燥しわハリ","regularPrice":16000.0,"isCampaign":true,"campaignPrice":9002,"isRecommended":true,"image":"","description":"トリプルコラーゲンの他、3つの有効成分配合。アミノ酸、マグア根皮エキス、コエンザイムQ10。潤い感のあるなめらかな肌に整います。"},{"id":"p2","name":"PAOMAムースネトワヤントピュリフィアント","itemCategory":"クレンジング洗顔","concern":"乾燥しわハリ","regularPrice":9000.0,"isCampaign":true,"campaignPrice":8500.0,"isRecommended":false,"image":"","description":"天然成分由来率100%の泡状洗顔料。スパイシーアンバーの香りが心地よく潤いを残しながらすっきりとした洗い上がり。"},{"id":"p4","name":"セルリニューローション","itemCategory":"化粧水","concern":"乾燥しわハリ","regularPrice":12100.0,"isCampaign":true,"campaignPrice":11000.0,"isRecommended":true,"image":"","description":"肌細胞活性化を促すヒト幹細胞培養液がたっぷりと含まれています。化粧水以上の美容化粧水！素早くハリと潤い、ふっくらハーダーに整えます。"},{"id":"p6","name":"セルリニュー クリーム","itemCategory":"クリーム","concern":"乾燥しわハリ","regularPrice":22000.0,"isCampaign":true,"campaignPrice":17600.0,"isRecommended":true,"image":"","description":"肌細胞活性化を促すヒト幹細胞培養液がたっぷりと含まれています。化粧水以上の美容化粧水！素早くハリと潤い、ふっくらハーダーに整えます。"},{"id":"p_1788949777815","name":"PAOMA UVケア2品セット（化粧水、ブライトニング美容液)","itemCategory":"化粧水","concern":"乾燥しわハリ","regularPrice":31000.0,"isCampaign":true,"campaignPrice":23000.0,"isRecommended":false,"image":"","description":"光を仕込む化粧水、輝きを引き出すセラム。澄み切った肌デュオで完成。"},{"id":"p_1788950123664","name":"今期ラスト！EVIDENSエクラクレーム","itemCategory":"クリーム","concern":"しみ","regularPrice":62700.0,"isCampaign":true,"campaignPrice":27000.0,"isRecommended":true,"image":"","description":"フラーレン、アルブチン、ビタミンC、誘導体、トリプルコラーゲン配合！透明感溢れる輝きを放つ煌めくような美しい肌へ。"},{"id":"p_1788950425620","name":"箱無し特価！ホワイトコラージェンマスク","itemCategory":"パック","concern":"老化","regularPrice":77000.0,"isCampaign":true,"campaignPrice":55000.0,"isRecommended":true,"image":"","description":"極上の天然コラーゲンシート。集中的に美容液成分を肌へ届け、潤いをもたらし閉じ込めます。肌は驚くほど柔らかく、潤い、輝きを放ち美しさが持続します。"},{"id":"p_1788950625244","name":"ミネラルブースター2本set","itemCategory":"美容液","concern":"乾燥しわハリ","regularPrice":22000.0,"isCampaign":true,"campaignPrice":18000.0,"isRecommended":true,"image":"","description":"不足しがちな。ミネラル&オリゴエレメンツをダイレクトにチャージ。角層のすみずみへ送り届け美しさを呼び覚ます！肌の底力を強力にサポートします。"},{"id":"p_1788950809198","name":"スリミング！ブースターマンスール3本set","itemCategory":"ボディケア","concern":"ダイエット","regularPrice":26400.0,"isCampaign":true,"campaignPrice":21000.0,"isRecommended":true,"image":"","description":"引き締まった肌へ整え、すっきりとしたボディーラインへ導きます。100%、ナチュラルな海洋由来成分でなめらかなお肌へ。"},{"id":"p_1788951006455","name":"タラソオリゴ2個set","itemCategory":"ボディケア","concern":"疲労ケア","regularPrice":66000.0,"isCampaign":true,"campaignPrice":50000.0,"isRecommended":true,"image":"","description":"アトピー、肩こり、腰痛、不眠、ダイエット、冷え、ホルモンバランスを海の恵みで健やかに整えます。血行促進、心身バランスなどあらゆる不調の方におすすめ。"},{"id":"p_1788951190604","name":"プレセランス　HEセラム（美容液）","itemCategory":"美容液","concern":"くすみ、ザラつき","regularPrice":6600.0,"isCampaign":true,"campaignPrice":5000.0,"isRecommended":false,"image":"","description":"お肌の不要な角質を取り除き、輝きあふれるみずみずしいお肌へ。ジェルタイプ、ブライトニング美容液です。"},{"id":"p_1788951330957","name":"プレセランス　拭き取り化粧水","itemCategory":"化粧水","concern":"くすみ、ザラつき","regularPrice":5000.0,"isCampaign":true,"campaignPrice":4200.0,"isRecommended":true,"image":"","description":"目立ち毛穴、キメのみだれを整えて、つるんとしたむき卵肌へ。クレンジングやパックの拭き取りに。"},{"id":"p_1788951482518","name":"イドラルミ2品set（化粧水+保湿クリーム）","itemCategory":"化粧水","concern":"乾燥しわハリ","regularPrice":13500.0,"isCampaign":true,"campaignPrice":11000.0,"isRecommended":true,"image":"","description":"低分子ヒアルロン酸がお肌への浸透を高め、角質隅々まで塗りお湯を行き渡らせます。"},{"id":"p_1788951629718","name":"ラストキャンペーン！プレセランス　マッサージュ","itemCategory":"パック","concern":"乾燥しわハリ","regularPrice":5500.0,"isCampaign":true,"campaignPrice":5000.0,"isRecommended":false,"image":"","description":"マッサージとパックの効果を兼ね備えた、コスパ最高なマッサージクリーム。ふっくらとハリ感のある肌へ導きます。"},{"id":"p_1788951857970","name":"プレセランス日焼けどめ3本set（フェイス）","itemCategory":"日焼け止め","concern":"しみ","regularPrice":10500.0,"isCampaign":true,"campaignPrice":8400.0,"isRecommended":false,"image":"","description":"紫外線吸収剤フリーなマイルドな処方。SPF 50+ PA4+日常生活はもちろんスポーツやレザーにも心強いウォータープルーフタイプです。"},{"id":"p_1788951940806","name":"ボディ用日焼けどめ3本set","itemCategory":"日焼け止め","concern":"しみ","regularPrice":9000.0,"isCampaign":true,"campaignPrice":7500.0,"isRecommended":false,"image":"","description":"紫外線吸収剤フリーなマイルドな処方。SPF 50+ PA4+日常生活はもちろんスポーツやレザーにも心強いウォータープルーフタイプです。"},{"id":"p_1788952110416","name":"エクラプレミアム5箱set","itemCategory":"日焼け止め","concern":"しみ","regularPrice":50000.0,"isCampaign":true,"campaignPrice":35000.0,"isRecommended":false,"image":"","description":"乳酸菌、バラ抽出物配合。内側から美しく輝く、明るい肌へと導く美容補助ドリンクです。透明感に満ちた光を放つ美しい肌と健康をサポートします。"},{"id":"p_1788952304458","name":"フコイダンプレミアム1箱","itemCategory":"健康サプリ","concern":"老化","regularPrice":8640.0,"isCampaign":true,"campaignPrice":7900.0,"isRecommended":false,"image":"","description":"健康を大切に考える方へ。フコイダン+乳酸菌のバイオティクス処方。忙しい中でも続けやすいワンランク上の健康習慣を実現するプレミアムサプリメントです。"},{"id":"p_1788952510077","name":"MOMEボディ用美容液","itemCategory":"ボディケア","concern":"乾燥しわハリ","regularPrice":5500.0,"isCampaign":true,"campaignPrice":4900.0,"isRecommended":false,"image":"","description":"肌の上で弾ける。泡がセラム上へと変化し、みずみずしく馴染む新感覚のボディー用美容液。足や腕などボディのエイジングケアに。"}];
 
-        async function loadProductsFromGoogleSheet() {
-            const controller = new AbortController();
-            const timeout = setTimeout(() => controller.abort(), 7000);
-            try {
-                // Google Sheetsの公開CSVをバックグラウンドで更新。
-                const csvUrl = GOOGLE_SHEET_CSV_URL + '&_=' + Date.now() + '_' + Math.random().toString(36).slice(2);
-                const response = await fetch(csvUrl, { cache: 'no-store', signal: controller.signal });
-                if (!response.ok) throw new Error(`Google Sheets CSV HTTP ${response.status}`);
-                const csvText = await response.text();
-                const rows = parseCSV(csvText);
-                if (rows.length < 2) throw new Error('Google Sheets CSVに商品データがありません');
+        function loadProductsFromGoogleSheet() {
+            return new Promise((resolve, reject) => {
+                const callbackName = 'nicoSheetCallback_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+                const script = document.createElement('script');
+                let finished = false;
 
-                return rows.slice(1)
-                    .filter(row => String(row[0] ?? '').trim())
-                    .map(row => {
-                        const id = String(row[0] ?? '').trim();
-                        return {
-                            id,
-                            name: String(row[1] ?? '').trim(),
-                            itemCategory: String(row[2] ?? '').trim(),
-                            concern: String(row[3] ?? '').trim(),
-                            regularPrice: numberFromSheet(row[4]),
-                            isCampaign: isTruthy(row[5]),
-                            campaignPrice: numberFromSheet(row[6]),
-                            isRecommended: isTruthy(row[7]),
-                            image: HIGH_RES_IMAGES[id] || '',
-                            description: String(row[9] ?? '').trim()
-                        };
-                    })
-                    .filter(p => p.id && p.name);
-            } finally {
-                clearTimeout(timeout);
-            }
+                const cleanup = () => {
+                    if (script.parentNode) script.parentNode.removeChild(script);
+                    try { delete window[callbackName]; } catch (e) { window[callbackName] = undefined; }
+                };
+
+                const timer = setTimeout(() => {
+                    if (finished) return;
+                    finished = true;
+                    cleanup();
+                    reject(new Error('Google Apps Script timeout'));
+                }, 10000);
+
+                window[callbackName] = (sheetProducts) => {
+                    if (finished) return;
+                    finished = true;
+                    clearTimeout(timer);
+                    cleanup();
+
+                    if (!Array.isArray(sheetProducts)) {
+                        reject(new Error('Google Sheets data format error'));
+                        return;
+                    }
+
+                    const productsFromSheet = sheetProducts
+                        .filter(p => p && p.id && p.name)
+                        .map(p => ({
+                            id: String(p.id).trim(),
+                            name: String(p.name || '').trim(),
+                            itemCategory: String(p.itemCategory || '').trim(),
+                            concern: String(p.concern || '').trim(),
+                            regularPrice: Number(p.regularPrice) || 0,
+                            isCampaign: !!p.isCampaign,
+                            campaignPrice: Number(p.campaignPrice) || 0,
+                            isRecommended: !!p.isRecommended,
+                            image: HIGH_RES_IMAGES[String(p.id).trim()] || p.image || '',
+                            description: String(p.description || '').trim()
+                        }));
+
+                    resolve(productsFromSheet);
+                };
+
+                script.onerror = () => {
+                    if (finished) return;
+                    finished = true;
+                    clearTimeout(timer);
+                    cleanup();
+                    reject(new Error('Google Apps Script load error'));
+                };
+
+                script.src = GOOGLE_SHEET_URL + '?callback=' + encodeURIComponent(callbackName) + '&_=' + Date.now();
+                document.head.appendChild(script);
+            });
         }
 
         // まず端末にある商品を即表示。その後、Google Sheetsを裏側で更新します。
-        // これにより「サイトを開いてから商品が出るまで待つ」時間をなくします。
         window.onload = function() {
-            // まず埋め込みデータを即表示。お客様を待たせません。
             products = EMBEDDED_PRODUCTS.map(p => ({
                 ...p,
                 image: HIGH_RES_IMAGES[String(p.id ?? '').trim()] || p.image || ''
@@ -465,8 +488,6 @@
             renderProducts();
             updateCartUI();
 
-            // その後、Google Sheetsの最新情報を裏側で取得。
-            // 7秒でタイムアウトしても、表示済みの商品はそのまま使えます。
             loadProductsFromGoogleSheet().then(sheetProducts => {
                 if (!sheetProducts.length) return;
                 products = sheetProducts;
